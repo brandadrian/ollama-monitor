@@ -7,6 +7,17 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/Dotnet.gitignore
 
+# Docker runtime data (Grafana, Loki, Prometheus volumes)
+docker/data/
+
+# IDE - JetBrains Rider
+.idea/
+
+# IDE - Visual Studio / VS Code
+.vs/
+*.user
+*.suo
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

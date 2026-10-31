@@ -1,0 +1,9 @@
+# Prometheus scrapt hier nichts selbst – OllamaMonitor schickt die Werte per OTLP.
+# job = service.name ("ollama-monitor"), instance = Rechnername
+global:
+  evaluation_interval: 30s
+
+storage:
+  tsdb:
+    # OTLP-Daten können leicht verspätet ankommen
+    out_of_order_time_window: 10m
