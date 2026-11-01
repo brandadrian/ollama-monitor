@@ -20,7 +20,7 @@ public sealed class Worker(Telemetry tel, IConfiguration cfg, ILogger<Worker> lo
 
         SystemStats? sys = OperatingSystem.IsWindows() ? new SystemStats() : null;
         var tailer = new LogTailer(logPath);
-        var parser = new LogParser(tel, () => tel.Current.Models);
+        var parser = new LogParser(tel);
 
         // Optional: rohe Log-Zeilen zusätzlich an Loki schicken
         var lokiUrl = cfg["Loki:Url"];

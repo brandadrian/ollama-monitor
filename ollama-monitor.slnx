@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/OllamaMonitor/OllamaMonitor.csproj" />
+  </Folder>
+</Solution>

@@ -15,14 +15,10 @@
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="10.0.*" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(NoOtel)' != 'true'">
+  <ItemGroup>
     <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.*" />
     <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.*" />
     <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.*" />
   </ItemGroup>
-
-  <PropertyGroup Condition="'$(NoOtel)' == 'true'">
-    <DefineConstants>$(DefineConstants);NO_OTEL</DefineConstants>
-  </PropertyGroup>
 
 </Project>
